@@ -11,9 +11,9 @@
 </div>
 
 
-USE THE FOLLOWINGS API THAT I CREATED: https://github.com/abhijeetsagr-g/rasoi-api
 ---
-
+USE THE FOLLOWING API THAT I CREATED:
+https://github.com/abhijeetsagr-g/rasoi_api
 ## 📸 Screenshots
 
 <div align="center">
