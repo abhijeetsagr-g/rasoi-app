@@ -20,7 +20,7 @@ https://github.com/abhijeetsagr-g/rasoi_api
 
 | Home Screen | Recipe Details | Category View |
 |:-----------:|:--------------:|:-------------:|
-| <img src="assets/home.png" width="200"/> | <img src="assets/details.png" width="200"/> | <img src="assets/category.png" width="200"/> |
+| <img src="assets/home_page.png" width="200"/> | <img src="assets/recipe_page.png" width="200"/> | <img src="assets/search_page.png" width="200"/> |
 
 > _If images are not rendering, view them in the [assets folder](./assets)._
 
