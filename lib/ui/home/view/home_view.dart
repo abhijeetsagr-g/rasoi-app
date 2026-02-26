@@ -1,22 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:rasoi_app/logic/providers/recipe_provider.dart';
-import 'package:rasoi_app/ui/home/widget/recipe_filter_panel.dart';
 import 'package:rasoi_app/ui/recipe/view/recipe_view.dart';
 import 'package:rasoi_app/ui/recipe/widget/recipe_card.dart';
 
-class HomeView extends ConsumerStatefulWidget {
+class HomeView extends ConsumerWidget {
   const HomeView({super.key});
 
   @override
-  ConsumerState<HomeView> createState() => _HomeViewState();
-}
-
-class _HomeViewState extends ConsumerState<HomeView> {
-  bool _showFilters = false;
-
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final recipesAsync = ref.watch(recipesProvider);
 
     return Scaffold(
@@ -31,22 +23,9 @@ class _HomeViewState extends ConsumerState<HomeView> {
             ref.read(recipeQueryProvider.notifier).updateSearch(value);
           },
         ),
-        actions: [
-          IconButton(
-            icon: Icon(
-              _showFilters ? Icons.filter_list_off : Icons.filter_list,
-            ),
-            onPressed: () {
-              setState(() {
-                _showFilters = !_showFilters;
-              });
-            },
-          ),
-        ],
       ),
       body: Column(
         children: [
-          if (_showFilters) const RecipeFilterPanel(),
           Expanded(
             child: RefreshIndicator.adaptive(
               onRefresh: () async {
